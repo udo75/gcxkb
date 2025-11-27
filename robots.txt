@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://udo75.github.io/gcxkb/sitemap.xml
