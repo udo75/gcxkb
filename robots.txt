@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /
+Allow: /articles/
 Sitemap: https://udo75.github.io/gcxkb/sitemap.xml
