@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Shelfbase Knowledge Portal</title> <!-- Changed title for better SEO -->
+<title>Shelfbase Knowledge Portal</title>
 <link rel="icon" href="/favicon.ico">
-<!-- Canonical URL placeholder that JavaScript will update -->
-<link rel="canonical" href="udo75.github.io" id="canonical-url">
+<!-- Hier ist KEIN kanonischer Tag notwendig, da dies die Hauptseite ist. -->
 <style>
 body {
     font-family:Verdana;
@@ -19,28 +18,9 @@ body {
 </head>
 
 <body>
-<!-- Updated text to be more descriptive -->
 Welcome to the Shelfbase Knowledge Portal.
 <div id="genesys-support-center"></div>
-
 <script type="text/javascript" charset="utf-8">
-  // Function to update the canonical URL based on the current window hash
-  function updateCanonicalUrl() {
-      var canonicalLink = document.getElementById('canonical-url');
-      var currentUrl = window.location.href;
-
-      // Update the 'href' attribute with the current full URL including the hash
-      canonicalLink.setAttribute('href', currentUrl);
-      console.log('Canonical URL updated to:', currentUrl);
-  }
-
-  // Call this function when the page loads initially
-  updateCanonicalUrl();
-
-  // Also call it whenever the URL hash changes (user navigates within the portal)
-  window.addEventListener('hashchange', updateCanonicalUrl);
-  
-  // The original Genesys Snippet
   (function (g, e, n, es, ys) {
     g['_genesysJs'] = e;
     g[e] = g[e] || function () {
@@ -49,7 +29,7 @@ Welcome to the Shelfbase Knowledge Portal.
     g[e].t = 1 * new Date();
     g[e].c = es;
     ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-  })(window, 'Genesys', 'https://apps.mypurecloud.de/genesys-bootstrap/genesys.min.js', {
+  })(window, 'Genesys', 'apps.mypurecloud.de', {
     environment: 'prod-euc1',
     deploymentId: '60d6ebc5-cdd6-45bb-a64a-f4c18d4b90af'
   });
