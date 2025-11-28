@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script type="text/javascript">
-        // Get the current path (e.g., /gcxkb/articles/...)
-        var path = window.location.pathname;
-        // Construct the new URL with the hash
-        var newUrl = "udo75.github.io" + path;
-        
-        // Immediately redirect the user
-        window.location.replace(newUrl);
-    </script>
+<meta charset="utf-8">
+<title>Shelfbase Knowledge Portal</title> 
+<link rel="icon" href="/favicon.ico">
+<!-- Canonical URL placeholder that JavaScript will update -->
+<link rel="canonical" href="udo75.github.io" id="canonical-url">
+<style>
+body {
+    font-family:Verdana;
+    color: #333;
+    padding:100px;
+}
+.testClass{
+    background-color:orange;
+}
+</style>
 </head>
-<body>
-    <h1>Redirecting to the correct page...</h1>
-    <p>If you are not redirected automatically, please follow this <a id="redirectLink" href="#">link</a>.</p>
 
-    <script type="text/javascript">
-        // Update the fallback link dynamically
-        document.getElementById('redirectLink').href = window.location.protocol + "//" + window.location.host + window.location.pathname.replace('index.html', '') + "#" + window.location.pathname.slice(1);
-    </script>
+<body>
+Welcome to the Shelfbase Knowledge Portal.
+<div id="genesys-support-center"></div>
+
+<script type="text/javascript" charset="utf-8">
+  // Function to update the canonical URL based on the current window hash
+  function updateCanonicalUrl() {
+      var canonicalLink = document.getElementById('canonical-url');
+      var currentUrl = window.location.href;
+
+      // Update the 'href' attribute with the current full URL including the hash
+      canonicalLink.setAttribute('href', currentUrl);
+      console.log('Canonical URL updated to:', currentUrl);
+  }
+
+  // Call this function when the page loads initially
+  updateCanonicalUrl();
+
+  // Also call it whenever the URL hash changes (user navigates within the portal)
+  window.addEventListener('hashchange', updateCanonicalUrl);
+  
+  // The original Genesys Snippet
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'apps.mypurecloud.de', {
+    environment: 'prod-euc1',
+    deploymentId: '60d6ebc5-cdd6-45bb-a64a-f4c18d4b90af'
+  });
+</script>
 </body>
 </html>
