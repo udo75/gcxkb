@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Test sample</title>
+<title>Shelfbase Knowledge Portal</title> <!-- Changed title for better SEO -->
 <link rel="icon" href="/favicon.ico">
+<!-- Canonical URL placeholder that JavaScript will update -->
+<link rel="canonical" href="udo75.github.io" id="canonical-url">
 <style>
 body {
     font-family:Verdana;
@@ -17,9 +19,28 @@ body {
 </head>
 
 <body>
-You see a preview of the default HTML sample.
+<!-- Updated text to be more descriptive -->
+Welcome to the Shelfbase Knowledge Portal.
 <div id="genesys-support-center"></div>
+
 <script type="text/javascript" charset="utf-8">
+  // Function to update the canonical URL based on the current window hash
+  function updateCanonicalUrl() {
+      var canonicalLink = document.getElementById('canonical-url');
+      var currentUrl = window.location.href;
+
+      // Update the 'href' attribute with the current full URL including the hash
+      canonicalLink.setAttribute('href', currentUrl);
+      console.log('Canonical URL updated to:', currentUrl);
+  }
+
+  // Call this function when the page loads initially
+  updateCanonicalUrl();
+
+  // Also call it whenever the URL hash changes (user navigates within the portal)
+  window.addEventListener('hashchange', updateCanonicalUrl);
+  
+  // The original Genesys Snippet
   (function (g, e, n, es, ys) {
     g['_genesysJs'] = e;
     g[e] = g[e] || function () {
